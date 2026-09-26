@@ -1,0 +1,1 @@
+"""sciforge 桌面客户端 API 层（MCP 客户端）。"""

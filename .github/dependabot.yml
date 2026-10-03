@@ -1,0 +1,56 @@
+# Dependabot 配置
+# 文档：https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+#
+# 维护提示：
+# - 依赖升级 PR 需同时评估 sciforge（MCP 版）仓，本仓升级 PySide6 时请确认
+#   上游是否已提供对应 Python 版本的 wheel（2026-09-26 实测：Python 3.14 尚无 PySide6 wheel）。
+# - 合并前请在无 PySide6 环境下验证 cli / agent / sessions / api 四个包仍可 import。
+
+version: 2
+
+updates:
+  # ---- Python 依赖（pip）----
+  - package-ecosystem: pip
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+      time: "09:00"
+      timezone: Asia/Shanghai
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies
+      - python
+    commit-message:
+      prefix: "chore(deps)"
+      prefix-development: "chore(deps-dev)"
+      include: scope
+    # PySide6 体积大且是唯一运行时依赖，单独分组便于集中评估
+    groups:
+      pyside6:
+        patterns:
+          - "PySide6*"
+        update-types:
+          - minor
+          - patch
+      python-dev:
+        patterns:
+          - "pytest*"
+          - "ruff*"
+          - "mypy*"
+
+  # ---- GitHub Actions ----
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly
+    labels:
+      - dependencies
+      - ci
+    commit-message:
+      prefix: "chore(ci)"
+      include: scope
+    groups:
+      actions:
+        patterns:
+          - "*"

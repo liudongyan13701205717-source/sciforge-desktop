@@ -1,0 +1,30 @@
+# CODEOWNERS
+# 文档：https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# 说明：本仓库尚无正式维护者团队（2026-09-26 时点为单一维护者项目），
+# 因此下面的 owner 为占位配置，需在维护者确认后替换为实际账号。
+# 语法：<路径模式> <@owner1> <@owner2> ...
+
+# 默认：未显式列出的文件由仓库 owner 负责
+*                       @liudongyan13701205717-source
+
+# 桌面端核心包
+/agent/                 @liudongyan13701205717-source
+/api/                   @liudongyan13701205717-source
+/cli/                   @liudongyan13701205717-source
+/core/                  @liudongyan13701205717-source
+/gui/                   @liudongyan13701205717-source
+/sessions/              @liudongyan13701205717-source
+
+# 打包与依赖
+/pyproject.toml         @liudongyan13701205717-source
+/.github/dependabot.yml @liudongyan13701205717-source
+
+# 文档与治理
+/docs/                  @liudongyan13701205717-source
+/*.md                   @liudongyan13701205717-source
+/.github/               @liudongyan13701205717-source
+
+# 忽略：构建产物与缓存无需评审
+*.py[cod]               @liudongyan13701205717-source
+__pycache__/            @liudongyan13701205717-source

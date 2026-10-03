@@ -1,0 +1,14 @@
+# Issue 模板配置
+# 文档：https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
+
+blank_issues_enabled: false
+contact_links:
+  - name: 安全漏洞报告
+    url: https://github.com/liudongyan13701205717-source/sciforge-desktop/security/advisories/new
+    about: 请勿用公开 Issue 报告安全漏洞。通过 Security 标签页的私密渠道提交。
+  - name: 支持与使用问题
+    url: https://github.com/liudongyan13701205717-source/sciforge-desktop/blob/main/.github/SUPPORT.md
+    about: 安装、配置、使用层面的问题请先查阅支持说明，再决定是否提 Issue。
+  - name: MCP 版本仓库（sciforge）
+    url: https://github.com/liudongyan13701205717-source/sciforge/issues
+    about: 学科 registry、论文工具、数据库连接器相关问题请到 MCP 版仓库提交。

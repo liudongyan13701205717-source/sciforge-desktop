@@ -1,0 +1,15 @@
+# FUNDING 配置文件
+# 文档：https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-supporters-for-your-repository
+#
+# 说明：本仓库目前没有公开的资助渠道。
+# 若要启用，在下方 uncomment 对应条目并填入真实账号。
+# 请勿填写占位账号 —— GitHub 会在仓库页面渲染「Sponsor」按钮，指向无效目标。
+
+# open_collective: sciforge
+# github: liudongyan13701205717-source
+# patreon: <username>
+# buy_me_a_coffee: <username>
+# ko_fi: <username>
+# tidelift: <package-name>
+# liberapay: <username>
+# custom: ["https://example.com/sponsor"]

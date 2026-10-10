@@ -1,0 +1,91 @@
+"""中国文学学科论文支持：文本/批评/比较体裁、MLA 引用样式与人文学科注记。"""
+
+from __future__ import annotations
+
+from sciforge.disciplines.base import Discipline
+
+DISCIPLINE = Discipline(
+    name="chinese_literature",
+    aliases=(
+        "chinese_literature", "中国文学", "中国现当代文学", "中国古代文学",
+        "Chinese literature", "Chinese literature studies",
+        "Chinese literary studies", "Chinese poetics",
+        "诗学", "文学批评", "literary criticism",
+        "中国古典文学", "ancient Chinese literature",
+        "中国现代文学", "modern Chinese literature",
+        "中国当代文学", "contemporary Chinese literature",
+        "文学史", "literary history of China",
+        "文学理论", "literary theory",
+        "Chinese fiction", "Chinese poetry", "中国小说",
+    ),
+    paper_types={
+        "research": (
+            "abstract",
+            "introduction（问题与背景）",
+            "literature review（文献综述）",
+            "textual analysis（文本分析）",
+            "discussion（讨论）",
+            "conclusions（结论）",
+            "references",
+        ),
+        "textual_analysis": (
+            "abstract",
+            "introduction",
+            "text（文本）",
+            "analysis（分析）",
+            "findings（发现）",
+            "conclusions（结论）",
+            "references",
+        ),
+        "comparative_study": (
+            "abstract",
+            "introduction",
+            "corpus（比较对象）",
+            "framework（框架）",
+            "analysis（分析）",
+            "conclusions（结论）",
+            "references",
+        ),
+    },
+    citation_style="MLA 样式（作者-页码；文学评论类期刊遵循 MLA 规范）",
+    reporting_standards={
+        "textual": "文本分析遵循文本分析报告规范",
+        "archival": "档案研究遵循史料考证报告规范",
+        "comparative": "比较研究遵循比较研究报告规范",
+        "qualitative": "质性研究遵循 COREQ/SRQR 报告规范",
+        "systematic_review": "系统综述遵循 PRISMA 声明",
+    },
+    conventions=(
+        "版本与校勘须注明",
+        "引文给出页码",
+        "作品标题用书名号/斜体",
+        "理论框架须明确",
+        "文学史脉络须交代",
+        "文本引证遵循原刊版次与页码",
+        "译名/异体字给出原文与对照",
+    ),
+    key_venues=(
+        "文学评论",
+        "中国现代文学研究丛刊",
+        "文学遗产",
+        "文艺研究",
+        "外国文学评论",
+        "中国比较文学",
+        "外国文学研究",
+        "Journal of Chinese Literature and Culture",
+        "Chinese Literature: Essays, Articles, Reviews",
+        "International Journal of Chinese Studies",
+    ),
+    units_and_formulas_notes=(
+        "引文给出页码",
+        "古籍用卷/篇/页标注",
+        "版本与版次须注明",
+        "译文给出原文页码",
+        "时间用统一纪年格式",
+    ),
+    paper_capable=True,
+    contribution_forms=("论文", "学术专著", "文学作品", "教案与教材", "译文", "报告", "数据集"),
+    tools=("CCL/BCC 语料库检索工具", "北京语言大学 BCC 现代汉语语料库", "清华 CTB 现代汉语平衡语料库", "CCB 古汉语语料库", "CTP 中国哲学书电子化计划古文献检索", "国学大师古籍全文检索", "维基文库 Chinese Text Project 古籍全文", "中华书局 中华古籍资源库", "国家图书馆 中华古籍资源库", "中国国家图书馆 中国历代典籍总目", "北京大学 国学网", "中国社会科学院语言研究所汉语方言语料库", "中国社科院文学研究所 中国文学理论研究中心", "上海图书馆 家谱总汇", "中国国家图书馆 家谱总汇", "中国第一历史档案馆 明清档案", "台北故宫博物院 藏品库", "国家图书馆 中国历代典籍总目", "EndNote 文献管理", "Zotero 文献管理", "LaTeX 排版", "LaTeX 古籍注释排版", "Python 文本分析（jieba）", "Python 中文自然语言处理库（HanLP）", "Python 中文分词库（SnowNLP）", "Python 文本挖掘库（TextBlob）", "Python 文本挖掘库（nltk）", "Python 中文文本挖掘库（spacy）", "Python 中文分词（jieba）", "Python 中文分词（pkuseg）", "Python 中文分词（HanLP）", "Python 中文分词（lcut）", "Python 中文分词（lcut2）", "Python 中文分词（jieba.posseg）", "Python 中文分词（jieba.analyse）", "Python 中文分词（jieba.tagger）", "Python 中文文本挖掘库（jieba.posseg.analyse）", "Python 中文文本挖掘库（jieba.posseg.tag）"),
+    category="文学",
+    databases=("CNKI", "万方", "OpenAlex", "Crossref", "北京大学 中文系古籍数据库", "中国现代文学馆 馆藏数据库"),
+)
